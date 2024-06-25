@@ -6,35 +6,56 @@
     <title>Futsal Event</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             text-align: center;
-            background-color: #f7f7f7;
+            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
         .container {
             margin-top: 50px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            font-size: 1.2em;
+            margin: 10px 0;
         }
         .button {
-            background-color: #4CAF50;
+            background-color: #007BFF;
             color: white;
-            padding: 15px 20px;
+            padding: 15px 30px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
-            margin: 10px 0;
-            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>dapatkan jadwal ke event kita </h1>
-        <p>jadwal event futsal</p>
-        <p>jadwal ujian eps</p>
-        <p>jadwal penerbangan</p>
-        <p>jadwal belajar bahasa korea gratis</p>
+        <h1>Dapatkan Jadwal ke Event Kita</h1>
+        <p>Jadwal Event Futsal</p>
+        <p>Jadwal Ujian EPS</p>
+        <p>Jadwal Penerbangan</p>
+        <p>Jadwal Belajar Bahasa Korea Gratis</p>
         <a href="webcal://pintaai.github.io/ical/event.ics" class="button">Add to Calendar</a>
     </div>
 </body>
