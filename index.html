@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futsal Event</title>
+    <title>Event Menarik</title>
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: #e0f7fa;
             margin: 0;
             padding: 0;
         }
         .container {
             margin-top: 50px;
             background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 30px 20px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            text-align: left;
         }
         h1 {
-            color: #333;
+            color: #00796b;
             font-size: 2.5em;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
         }
         p {
-            color: #666;
-            font-size: 1.2em;
+            color: #555;
+            font-size: 1.1em;
             margin: 10px 0;
+            line-height: 1.6;
         }
         .button {
             background-color: #007BFF;
@@ -43,20 +46,57 @@
             border-radius: 5px;
             transition: background-color 0.3s;
             margin-top: 20px;
+            display: block;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
         }
         .button:hover {
             background-color: #0056b3;
+        }
+        .event-list {
+            margin-top: 20px;
+        }
+        .event-item {
+            background-color: #e0f2f1;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .event-title {
+            font-size: 1.2em;
+            color: #004d40;
+            margin: 0 0 5px;
+        }
+        .event-description {
+            margin: 0;
+            color: #00796b;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Dapatkan Jadwal ke Event Kita</h1>
-        <p>Jadwal Event Futsal</p>
-        <p>Jadwal Ujian EPS</p>
-        <p>Jadwal Penerbangan</p>
-        <p>Jadwal Belajar Bahasa Korea Gratis</p>
-        <a href="webcal://pintaai.github.io/ical/event.ics" class="button">Add to Calendar</a>
+        <h1>Ikuti Event-Event Seru di Pejuangkorea!</h1>
+        <p>Jangan lewatkan event terbaru kami. Mulai dari olahraga, ujian, perjalanan, hingga belajar bahasa baru, kami punya semuanya untukmu!</p>
+        <div class="event-list">
+            <div class="event-item">
+                <p class="event-title">Event Futsal</p>
+                <p class="event-description">Siapkan dirimu untuk unjuk kebolehan di lapangan!</p>
+            </div>
+            <div class="event-item">
+                <p class="event-title">Jadwal Ujian EPS</p>
+                <p class="event-description">Selalu up-to-date dengan jadwal ujian terbaru.</p>
+            </div>
+            <div class="event-item">
+                <p class="event-title">Jadwal Penerbangan</p>
+                <p class="event-description">Rencanakan perjalananmu dengan jadwal penerbangan kami yang lengkap.</p>
+            </div>
+            <div class="event-item">
+                <p class="event-title">Kelas Bahasa Korea Gratis</p>
+                <p class="event-description">Ikuti kelas gratis kami dan belajar bahasa Korea dari yang terbaik!</p>
+            </div>
+        </div>
+        <a href="webcal://pintaai.github.io/ical/event.ics" class="button">Tambahkan ke Kalender</a>
     </div>
 </body>
 </html>
