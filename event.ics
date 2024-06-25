@@ -6,8 +6,8 @@ UID:futsal_event_20240626
 DTSTAMP:20240625T123000Z
 DTSTART:20240626T170000Z
 DTEND:20240626T190000Z
-SUMMARY:futsal PJKR
+SUMMARY:futsal PJKR @pejuangkorea
 DESCRIPTION:ini contoh deskribsi dari event yang akan di laksanakan
-LOCATION:lokasinya ada di korea selatan
+LOCATION:lapangan futsal
 END:VEVENT
 END:VCALENDAR
