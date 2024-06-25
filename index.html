@@ -1,121 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event PejuangKorea</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #f0f7ff, #c4e0f9);
-            margin: 0;
-            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #e0e7ff);
         }
-        .container {
-            margin-top: 50px;
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            padding: 30px 20px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
+        .event-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        h1 {
-            color: #00796b;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        p {
-            color: #555;
-            font-size: 1.1em;
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-        .button {
-            background-color: #007BFF;
-            color: white;
-            padding: 15px 30px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1em;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            margin-top: 20px;
-            display: block;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        .event-list {
-            margin-top: 20px;
-        }
-        .event-item {
-            background-color: #e0f2f1;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .event-item img {
-            width: 50px;
-            height: 50px;
-            margin-right: 15px;
-        }
-        .event-title {
-            font-size: 1.2em;
-            color: #004d40;
-            margin: 0;
-        }
-        .event-description {
-            margin: 0;
-            color: #00796b;
+        .gradient-text {
+            background: linear-gradient(45deg, #4F46E5, #7C3AED);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Ikuti Event-Event Di PejuangKorea!</h1>
-        <p>Jangan lewatkan event terbaru kami. Mulai dari olahraga, ujian, perjalanan, hingga belajar bahasa baru, kami punya semuanya untukmu!</p>
-        <div class="event-list">
-            <div class="event-item">
-                <img src="https://img.icons8.com/ios-filled/50/00796b/football2.png" alt="Futsal">
-                <div>
-                    <p class="event-title">Event Futsal</p>
-                    <p class="event-description">Siapkan dirimu untuk unjuk kebolehan di lapangan!</p>
+<body class="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl font-bold mb-4 gradient-text">Event PejuangKorea</h1>
+        </header>
+
+        <main>
+            <div class="bg-white rounded-2xl shadow-xl p-10 mb-12">
+                <p class="text-gray-700 text-lg mb-8 leading-relaxed">Bergabunglah dalam event terbaru kami! Dari olahraga hingga belajar bahasa, kami punya sesuatu untuk semua orang. Jangan lewatkan kesempatan luar biasa ini untuk berkembang dan berkoneksi.</p>
+                
+                <div class="grid gap-8 md:grid-cols-2">
+                    <div class="event-card bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-8 shadow-md">
+                        <svg class="w-16 h-16 mb-6 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6V18M6 12H18" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Turnamen Futsal</h3>
+                        <p class="text-gray-600 text-lg">Tunjukkan kemampuanmu di lapangan!</p>
+                    </div>
+                    <div class="event-card bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-8 shadow-md">
+                        <svg class="w-16 h-16 mb-6 text-green-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 10H16M8 14H16" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Jadwal Ujian EPS</h3>
+                        <p class="text-gray-600 text-lg">Tetap update dengan tanggal ujian terbaru.</p>
+                    </div>
+                    <div class="event-card bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl p-8 shadow-md">
+                        <svg class="w-16 h-16 mb-6 text-yellow-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 12H4M20 12L16 8M20 12L16 16" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Jadwal Penerbangan</h3>
+                        <p class="text-gray-600 text-lg">Rencanakan perjalananmu dengan info penerbangan lengkap kami.</p>
+                    </div>
+                    <div class="event-card bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl p-8 shadow-md">
+                        <svg class="w-16 h-16 mb-6 text-purple-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4V20M4 12H20" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Kelas Bahasa Korea Gratis</h3>
+                        <p class="text-gray-600 text-lg">Belajar bahasa Korea dari yang terbaik, gratis!</p>
+                    </div>
                 </div>
             </div>
-            <div class="event-item">
-                <img src="https://img.icons8.com/ios-filled/50/00796b/exam.png" alt="Ujian EPS">
-                <div>
-                    <p class="event-title">Jadwal Ujian EPS</p>
-                    <p class="event-description">Selalu up-to-date dengan jadwal ujian terbaru.</p>
-                </div>
+
+            <div class="text-center">
+                <a href="webcal://pintaai.github.io/ical/event.ics" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg">
+                    Tambahkan ke Kalender
+                </a>
             </div>
-            <div class="event-item">
-                <img src="https://img.icons8.com/ios-filled/50/00796b/airplane-take-off.png" alt="Penerbangan">
-                <div>
-                    <p class="event-title">Jadwal Penerbangan</p>
-                    <p class="event-description">Rencanakan perjalananmu dengan jadwal penerbangan kami yang lengkap.</p>
-                </div>
-            </div>
-            <div class="event-item">
-                <img src="https://img.icons8.com/ios-filled/50/00796b/language.png" alt="Bahasa Korea">
-                <div>
-                    <p class="event-title">Kelas Bahasa Korea Gratis</p>
-                    <p class="event-description">Ikuti kelas gratis kami dan belajar bahasa Korea dari yang terbaik!</p>
-                </div>
-            </div>
-        </div>
-        <a href="webcal://pintaai.github.io/ical/event.ics" class="button">Tambahkan ke Kalender</a>
+        </main>
+
+        <footer class="mt-16 text-center text-gray-600">
+            <p>&copy; 2024 PejuangKorea. Hak cipta dilindungi undang-undang.</p>
+        </footer>
     </div>
 </body>
 </html>
