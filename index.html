@@ -74,6 +74,12 @@
         border-radius: 50%;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+        .dark-mode-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 16px;
+    }
 </style>
 
 </head>
@@ -83,17 +89,17 @@
         <div class="banner-container mb-12">
             <img src="banner.png" alt="Banner PJKR Futsal Tournament 2024" class="banner">
             <img src="logo.png" alt="PJKR Futsal Tournament Logo" class="logo">
-        </div>
-
-
-        <header class="text-center mb-16 relative">
-            <div class="absolute top-0 right-0 m-4">
+                        <div class="dark-mode-toggle">
                 <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-maroon">
                     <svg class="w-6 h-6 text-gray-800 dark:text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
             </div>
+        </div>
+
+
+        <header class="text-center mb-16 relative">
             <h1 class="text-5xl font-bold mb-4 gradient-text">PJKR Futsal Tournament 2024</h1>
             <p class="text-xl text-gray-600 dark:text-gray-400">Kompetisi Futsal Bergengsi untuk Mahasiswa PJKR</p>
         </header>
