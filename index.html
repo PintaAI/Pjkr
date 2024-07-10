@@ -16,7 +16,7 @@
                     },
                     colors: {
                         'maroon': '#8B0000',
-                        'gold': '#d43f3f',
+                        'gold': '#5981c7',
                         'dark-bg': '#1a1a1a', // New dark background color
                     },
                     animation: {
@@ -40,10 +40,10 @@
     </script>
 <style>
     .gradient-text {
-        background: linear-gradient(45deg, #8B0000, #6e569b);
+        background: linear-gradient(45deg, #a70202, #074ac5);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-size: 200% auto;
+        background-size: 100% auto;
         animation: gradient 5s ease infinite;
     }
     .dark .dark\:bg-dark-bg {
@@ -89,7 +89,7 @@
         <div class="banner-container mb-12">
             <img src="banner.png" alt="Banner PJKR Futsal Tournament 2024" class="banner">
             <img src="logo.png" alt="PJKR Futsal Tournament Logo" class="logo">
-                        <div class="dark-mode-toggle">
+            <div class="dark-mode-toggle">
                 <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-maroon">
                     <svg class="w-6 h-6 text-gray-800 dark:text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
@@ -102,7 +102,7 @@
             <h1 class="text-5xl font-bold mb-4 gradient-text">PJKR Futsal Tournament 2024</h1>
             <p class="text-xl text-gray-600 dark:text-gray-400">Kompetisi Futsal Bergengsi untuk para Antusias Penggiat Futsal di Korea Selatan</p>
         </header>
-        
+
         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-12 transform hover:shadow-2xl transition-all duration-300">
             <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-6">Informasi Event</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -125,37 +125,36 @@
             </div>
             <p class="text-gray-700 dark:text-gray-300">PJKR Futsal Tournament 2024 merupakan ajang kompetisi futsal tahunan yang diselenggarakan untuk mempererat tali silaturahmi antar para Antusias Penggiat Futsal di Korea Selatan sekaligus mengasah keterampilan dalam bidang olahraga futsal. Event ini tidak hanya menjadi wadah untuk berkompetisi, tetapi juga sebagai sarana networking dan pengembangan soft skill bagi para peserta.</p>
             <div class="mt-4">
-                <a href="https://pejuangkorea.notion.site/Syarat-Ketentuan-Turnamen-4dd28ffce0e04ece8820c90974df7bd8" class="inline-block bg-maroon text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out hover:bg-red-700 transform hover:-translate-y-1 hover:shadow-lg">📄 Syarat dan Ketentuan</a>
+                <a href="https://pejuangkorea.notion.site/Syarat-Ketentuan-Turnamen-4dd28ffce0e04ece8820c90974df7bd8" class="inline-block bg-gray-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out hover:bg-red-700 transform hover:-translate-y-1 hover:shadow-lg">📄 Syarat dan Ketentuan</a>
             </div>
         </div>
         
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-12 transform hover:shadow-2xl transition-all duration-300">
-                <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-6">Hadiah Pemenang</h2>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <span class="text-2xl mr-2">🥇</span>
-                        <span><strong>Juara 1:</strong> ₩1.300.000 + Trofi</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-2xl mr-2">🥈</span>
-                        <span><strong>Juara 2:</strong> ₩1.000.000 + Medali</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-2xl mr-2">🥉</span>
-                        <span><strong>Juara 3:</strong> ₩800.000 + Medali</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-2xl mr-2">⚽</span>
-                        <span><strong>Top Scorer:</strong> ₩250.000 + Penghargaan Khusus</span>
-                    </li>
-                </ul>
-            </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-12 transform hover:shadow-2xl transition-all duration-300">
+            <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-6">Hadiah Pemenang</h2>
+            <ul id="prizeList" class="space-y-4 blur-sm cursor-pointer" onclick="revealPrizes()">
+                <li class="flex items-start">
+                    <span class="text-2xl mr-2">🥇</span>
+                    <span><strong>Juara 1:</strong> ₩1.300.000 + Trofi</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-2xl mr-2">🥈</span>
+                    <span><strong>Juara 2:</strong> ₩1.000.000 + Medali</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-2xl mr-2">🥉</span>
+                    <span><strong>Juara 3:</strong> ₩800.000 + Medali</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-2xl mr-2">⚽</span>
+                    <span><strong>Top Scorer:</strong> ₩250.000 + Penghargaan Khusus</span>
+                </li>
+            </ul>
+        </div>
 
-        
         <div class="text-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a href="https://tally.so/r/waGYEb" target="_blank" class="inline-block bg-gradient-to-r from-maroon to-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out hover:from-red-700 hover:to-maroon transform hover:-translate-y-1 hover:shadow-lg">📝 Daftar Sekarang</a>
             <a href="webcal://pintaai.github.io/Pjkr/event.ics" class="inline-block bg-gray-800 dark:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out hover:bg-gray-700 dark:hover:bg-gray-600 transform hover:-translate-y-1 hover:shadow-lg">🗓️ Dapatkan Jadwal Sekarang</a>
-            <a href="https://api.whatsapp.com/send/?phone=6285728212056&text&type=phone_number&app_absent=0" target="_blank" class="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out hover:bg-green-600 transform hover:-translate-y-1 hover:shadow-lg">Hubungi kami di WhatsApp</a>
+            <a href="https://api.whatsapp.com/send/?phone=6285728212056&text&type=phone_number&app_absent=0" target="_blank" class="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out hover:bg-green-600 transform hover:-translate-y-1 hover:shadow-lg">Info WhatsApp</a>
         </div>
     </div>
     
@@ -163,6 +162,9 @@
         <p>© 2024 PJKR Futsal Tournament. Diselenggarakan oleh komunitas PejuangKorea.</p>
     </footer>
 
+    <!-- Tambahkan pustaka canvas-confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const html = document.documentElement;
@@ -186,7 +188,47 @@
                 localStorage.theme = 'light';
             }
         });
-    </script>
-</body>
 
+        function revealPrizes() {
+            const prizeList = document.getElementById('prizeList');
+            prizeList.classList.remove('blur-sm');
+            prizeList.classList.add('reveal-prizes');
+            displayFireworks();
+        }
+
+        function displayFireworks() {
+            const duration = 5 * 1000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            const interval = setInterval(() => {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                const particleCount = 50 * (timeLeft / duration);
+                // since particles fall down, start a bit higher than random
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+        }
+    </script>
+
+    <style>
+        .blur-md {
+            filter: blur(10px);
+        }
+
+        .reveal-prizes {
+            transition: filter 0.3s ease-in-out;
+            filter: none;
+        }
+    </style>
+</body>
 </html>
