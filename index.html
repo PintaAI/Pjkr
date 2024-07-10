@@ -169,7 +169,7 @@
         });
 
         // Check for saved theme preference or use device preference
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
             html.classList.add('dark');
         } else {
             html.classList.remove('dark')
