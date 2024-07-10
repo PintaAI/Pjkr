@@ -1,88 +1,152 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event PejuangKorea</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>PJKR Futsal Tournament 2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'maroon': '#8B0000',
+                        'gold': '#FFD700',
+                        'dark-bg': '#1a1a1a', // New dark background color
+                    },
+                    animation: {
+                        'gradient': 'gradient 5s ease infinite',
+                    },
+                    keyframes: {
+                        'gradient': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f0f4ff, #e0e7ff);
-        }
-        .event-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .event-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
         .gradient-text {
-            background: linear-gradient(45deg, #4F46E5, #7C3AED);
+            background: linear-gradient(45deg, #8B0000, #FFD700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: gradient 5s ease infinite;
+        }
+        .dark .dark\:bg-dark-bg {
+            background-color: #1a1a1a;
+        }
+        .dark .dark\:text-white {
+            color: #ffffff;
         }
     </style>
 </head>
-<body class="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-4xl mx-auto">
-        <header class="text-center mb-16">
-            <h1 class="text-5xl font-bold mb-4 gradient-text">Event PejuangKorea</h1>
+<body class="font-sans bg-gray-100 text-gray-800 dark:bg-dark-bg dark:text-white transition-colors duration-300">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <header class="text-center mb-16 relative">
+            <div class="absolute top-0 right-0 m-4">
+                <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-maroon">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+            <img src="logo.png" alt="PJKR Futsal Tournament" class="mx-auto w-36 h-auto mb-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+            <h1 class="text-5xl font-bold mb-4 gradient-text">PJKR Futsal Tournament 2024</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400">Kompetisi Futsal Bergengsi untuk Mahasiswa PJKR</p>
         </header>
-
-        <main>
-            <div class="bg-white rounded-2xl shadow-xl p-10 mb-12">
-                <p class="text-gray-700 text-lg mb-8 leading-relaxed">Bergabunglah dalam event terbaru kami! Dari olahraga hingga belajar bahasa, kami punya sesuatu untuk semua orang. Jangan lewatkan kesempatan luar biasa ini untuk berkembang dan berkoneksi.</p>
-                
-                <div class="grid gap-8 md:grid-cols-2">
-                    <div class="event-card bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-8 shadow-md">
-                        <svg class="w-16 h-16 mb-6 text-blue-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 6V18M6 12H18" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Turnamen Futsal</h3>
-                        <p class="text-gray-600 text-lg">Tunjukkan kemampuanmu di lapangan!</p>
-                    </div>
-                    <div class="event-card bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-8 shadow-md">
-                        <svg class="w-16 h-16 mb-6 text-green-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M8 10H16M8 14H16" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Jadwal Ujian EPS</h3>
-                        <p class="text-gray-600 text-lg">Tetap update dengan tanggal ujian terbaru.</p>
-                    </div>
-                    <div class="event-card bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl p-8 shadow-md">
-                        <svg class="w-16 h-16 mb-6 text-yellow-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 12H20M4 12L8 8M4 12L8 16" stroke="currentColor" stroke-width="2"/>
-                            <path d="M20 12H4M20 12L16 8M20 12L16 16" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Jadwal Penerbangan</h3>
-                        <p class="text-gray-600 text-lg">Rencanakan perjalananmu dengan info penerbangan lengkap kami.</p>
-                    </div>
-                    <div class="event-card bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl p-8 shadow-md">
-                        <svg class="w-16 h-16 mb-6 text-purple-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 4V20M4 12H20" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Kelas Bahasa Korea Gratis</h3>
-                        <p class="text-gray-600 text-lg">Belajar bahasa Korea dari yang terbaik, gratis!</p>
-                    </div>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-12 transform hover:shadow-2xl transition-all duration-300">
+            <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-6">Informasi Event</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-maroon dark:text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <p><strong>Tanggal:</strong> 17 September 2024</p>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-maroon dark:text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <p><strong>Lokasi:</strong> Lapangan Futsal Handaeap Ansan</p>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-maroon dark:text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <p><strong>Biaya Pendaftaran:</strong> 300.000 won per tim</p>
+                </div>
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-maroon dark:text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <p><strong>Kapasitas:</strong> 16 tim</p>
                 </div>
             </div>
-
-            <div class="text-center">
-                <a href="webcal://pintaai.github.io/ical/event.ics" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 shadow-lg">
-                    Tambahkan ke Kalender
-                </a>
-            </div>
-        </main>
-
-        <footer class="mt-16 text-center text-gray-600">
-            <p>&copy; 2024 PejuangKorea. Hak cipta dilindungi undang-undang.</p>
-        </footer>
+            <p class="text-gray-700 dark:text-gray-300">PJKR Futsal Tournament 2024 merupakan ajang kompetisi futsal tahunan yang diselenggarakan untuk mempererat tali silaturahmi antar mahasiswa PJKR sekaligus mengasah keterampilan dalam bidang olahraga futsal. Event ini tidak hanya menjadi wadah untuk berkompetisi, tetapi juga sebagai sarana networking dan pengembangan soft skill bagi para peserta.</p>
+        </div>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-12 transform hover:shadow-2xl transition-all duration-300">
+            <h2 class="text-3xl font-bold text-maroon dark:text-gold mb-6">Hadiah Pemenang</h2>
+            <ul class="space-y-4">
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 mr-2 text-maroon dark:text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    <span><strong>Juara 1:</strong> ₩1.300.000 + Trofi</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 mr-2 text-maroon dark:text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    <span><strong>Juara 2:</strong> ₩1.000.000 + Medali</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 mr-2 text-maroon dark:text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    <span><strong>Juara 3:</strong> ₩800.000 + Medali</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 mr-2 text-maroon dark:text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    <span><strong>Top Scorer:</strong> ₩250.000 + Penghargaan Khusus</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="text-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="https://tally.so/r/waGYEb" target="_blank" class="inline-block bg-gradient-to-r from-maroon to-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out hover:from-red-700 hover:to-maroon transform hover:-translate-y-1 hover:shadow-lg">Daftar Sekarang</a>
+            <a href="webcal://pintaai.github.io/ical/event.ics" class="inline-block bg-gray-800 dark:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out hover:bg-gray-700 dark:hover:bg-gray-600 transform hover:-translate-y-1 hover:shadow-lg">Tambahkan ke Kalender</a>
+        </div>
     </div>
+    
+    <footer class="text-center mt-16 text-gray-600 dark:text-gray-400 text-sm">
+        <p>© 2024 PJKR Futsal Tournament. Diselenggarakan oleh Himpunan Mahasiswa PJKR.</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+
+        // Check for saved theme preference or use device preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark')
+        }
+
+        // Save theme preference when toggled
+        darkModeToggle.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+            } else {
+                localStorage.theme = 'light';
+            }
+        });
+    </script>
 </body>
 </html>

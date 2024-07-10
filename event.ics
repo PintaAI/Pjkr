@@ -1,13 +1,13 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Your Organization//Your Product//EN
+PRODID:-//Your Organization//NONSGML Event//EN
 BEGIN:VEVENT
-UID:futsal_event_20240628
-DTSTAMP:20240625T123000Z
-DTSTART:20240628T070000Z
-DTEND:20240628T190000Z
-SUMMARY:futsal PJKR @pejuangkorea
-DESCRIPTION:ini contoh deskribsi dari event yang akan di laksanakan https://shorturl.at/YHhuP
-LOCATION:lapangan futsal
+UID:20240917T080000Z@yourdomain.com
+DTSTAMP:20240710T000000Z
+DTSTART:20240917T080000Z
+DTEND:20240917T180000Z
+SUMMARY:Pendaftaran Tim Peserta Event Futsal PejuangKorea 2024
+LOCATION:Lapangan futsal Handaeap Ansan
+DESCRIPTION:Event PejuangKorea Futsal! Kami sangat senang Anda tertarik untuk bergabung dalam kompetisi futsal yang penuh semangat ini. Melalui turnamen ini, kami berharap dapat mempererat silaturahmi antar tim dan memberikan pengalaman berolahraga yang menyenangkan. Isi formulir di bawah ini untuk mendaftarkan tim Anda. Semangat dan sampai jumpa di lapangan! Untuk info lebih lanjut, lihat sini: https://pintaai.github.io/Pjkr/
 END:VEVENT
 END:VCALENDAR
