@@ -38,50 +38,49 @@
             }
         }
     </script>
-<style>
-    .gradient-text {
-        background: linear-gradient(45deg, #a70202, #074ac5);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 100% auto;
-        animation: gradient 5s ease infinite;
-    }
-    .dark .dark\:bg-dark-bg {
-        background-color: #1a1a1a;
-    }
-    .dark .dark\:text-white {
-        color: #ffffff;
-    }
-    .banner-container {
-        position: relative;
-        width: 100%;
-        max-width: 1200px; /* Atur sesuai kebutuhan */
-        margin: auto;
-    }
-    .banner-container img.banner {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .banner-container img.logo {
-        position: absolute;
-        bottom: -20px; /* Posisi di atas banner */
-        left: 25%; /* Geser ke kiri */
-        transform: translateX(-100%);
-        width: 100px; /* Atur sesuai kebutuhan */
-        height: auto;
-        border-radius: 50%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-        .dark-mode-toggle {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 16px;
-    }
-</style>
-
+    <style>
+        .gradient-text {
+            background: linear-gradient(45deg, #a70202, #074ac5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 100% auto;
+            animation: gradient 5s ease infinite;
+        }
+        .dark .dark\:bg-dark-bg {
+            background-color: #1a1a1a;
+        }
+        .dark .dark\:text-white {
+            color: #ffffff;
+        }
+        .banner-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px; /* Atur sesuai kebutuhan */
+            margin: auto;
+        }
+        .banner-container img.banner {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .banner-container img.logo {
+            position: absolute;
+            bottom: -20px; /* Posisi di atas banner */
+            left: 25%; /* Geser ke kiri */
+            transform: translateX(-100%);
+            width: 100px; /* Atur sesuai kebutuhan */
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+            .dark-mode-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 16px;
+        }
+    </style>
 </head>
 <body class="font-sans bg-gray-100 text-gray-800 dark:bg-dark-bg dark:text-white transition-colors duration-300">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -161,10 +160,9 @@
     <footer class="text-center mt-16 text-gray-600 dark:text-gray-400 text-sm">
         <p>© 2024 PJKR Futsal Tournament. Diselenggarakan oleh komunitas PejuangKorea.</p>
     </footer>
-
+    <div class="h-10"/>
     <!-- Tambahkan pustaka canvas-confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-    
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const html = document.documentElement;
@@ -219,16 +217,5 @@
             }, 250);
         }
     </script>
-
-    <style>
-        .blur-md {
-            filter: blur(10px);
-        }
-
-        .reveal-prizes {
-            transition: filter 0.3s ease-in-out;
-            filter: none;
-        }
-    </style>
 </body>
 </html>
