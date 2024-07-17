@@ -80,6 +80,20 @@
             right: 0;
             margin: 16px;
         }
+        .sponsor-logo {
+            max-width: 200px;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        .sponsor-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-100 text-gray-800 dark:bg-dark-bg dark:text-white transition-colors duration-300">
@@ -156,9 +170,21 @@
             <a href="https://api.whatsapp.com/send/?phone=6285728212056&text&type=phone_number&app_absent=0" target="_blank" class="inline-block bg-green-500 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out hover:bg-green-600 transform hover:-translate-y-1 hover:shadow-lg">Info WhatsApp</a>
         </div>
     </div>
-    
-    <footer class="text-center mt-16 text-gray-600 dark:text-gray-400 text-sm">
-        <p>© 2024 PJKR Futsal Tournament. Diselenggarakan oleh komunitas PejuangKorea.</p>
+
+    <footer class="mt-16 bg-gray-200 dark:bg-gray-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center justify-center mb-6">
+                <h3 class="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">Sponsored by</h3>
+                <div class="sponsor-container">
+                    <img src="sponsor.png" alt="Sponsor 1" class="sponsor-logo">
+                    <img src="sponsor1.png" alt="Sponsor 2" class="sponsor-logo">
+                    <img src="sponsor2.jpg" alt="Sponsor 3" class="sponsor-logo">
+                </div>
+            </div>
+            <p class="text-center text-gray-600 dark:text-gray-400 text-sm">
+                © 2024 PJKR Futsal Tournament. Diselenggarakan oleh komunitas PejuangKorea.
+            </p>
+        </div>
     </footer>
     <div class="h-10"/>
     <!-- Tambahkan pustaka canvas-confetti -->
